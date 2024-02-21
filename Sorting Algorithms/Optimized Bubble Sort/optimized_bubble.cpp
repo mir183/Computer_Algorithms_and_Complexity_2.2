@@ -11,7 +11,7 @@ void bubbleSort(int arr[], int n) {
                 sorted = true;
             }
         }
-        if (sorted) {
+        if (!sorted) {
             // If no swaps were made in an iteration, the array is already sorted
             break;
         }
