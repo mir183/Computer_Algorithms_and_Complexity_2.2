@@ -5,7 +5,7 @@ using namespace std;
 int* memo;
 
 int fib(int n) {
-    if (n ==0 || n == 1) {
+    if (n <=1) {
         return n;
     }
 
@@ -19,11 +19,10 @@ int fib(int n) {
     return memo[n];
 }
 
-
 int main() {
     int n;
-    cout<<"Enter the value of n: ";
-    cin>>n;
+    cout << "Enter the value of n: ";
+    cin >> n;
     memo = new int[n + 1];  // Dynamically allocate memoization array
     fill_n(memo, n + 1, -1);  // Initialize all elements to -1
     int result = fib(n);
